@@ -20,6 +20,7 @@ jobs:
       - name: Test action
         uses: ./
         with:
+          github_token: ${{ secrets.GH_TOKEN }}
           branches: test1,test2
           prefix: prefix-
           suffix: -suffix
