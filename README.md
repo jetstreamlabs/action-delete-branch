@@ -20,19 +20,22 @@ If setting the `soft_fail` flag to `true` a warning will be written to the conso
   with:
     github_token: ${{github.token}}
     numbers: 13,22,${{github.event.pull_request.number}}
+
 - name: Delete pr-* branches
   uses: dawidd6/action-delete-branch@v3
   with:
     github_token: ${{github.token}}
     branches: 13,22,33
     prefix: pr-
+
 - name: Delete branch
   uses: dawidd6/action-delete-branch@v3
   with:
     github_token: ${{github.token}}
     branches: test
     suffix: -done
- - name: Delete branch in specific repository with a specific owner
+
+- name: Delete branch in specific repository with a specific owner
    uses: dawidd6/action-delete-branch@v3
    with:
     github_token: ${{github.token}}
